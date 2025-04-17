@@ -10,13 +10,17 @@ function mergesort(arr) {
           start += 1;
         }
         else {
+          //swap
           var tmp = arr[start] 
           arr[start] = arr[end] 
-
+          
+          //shift
           for (var s = end; s > start; s--) {
             arr[s] = arr[s-1];
           }
+          //finish swap
           arr[start+1] = tmp;
+          //move pointers
           start++;
           end++;
         }
